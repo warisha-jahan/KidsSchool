@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Top Header */
+
+
+.top-header {
+    background-color: #F72585;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-header strong {
+    margin: 0px 20px;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+/* Primary Header */
+
+
+.primary-header {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 10%;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 1s ease-out;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+nav {
+    padding: 10px 20px;
+
+}
+
+nav a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #F72585;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+nav a:hover {
+    color: #f7a102;
+
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    background: url(kidsSchool-Images/abc.png) no-repeat center;
+    top: 30px;
+    left: -15px;
+    opacity: 0;
+    z-index: -1;
+    padding: 20px;
+    transition: all 1000ms;
+}
+
+nav a:hover::before {
+    opacity: 1;
+    top: 12px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 20px;
+    border: 0;
+    background-color: transparent;
+    outline: 2px solid #F72585;
+    color: #F72585;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 1000ms;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+
+button:hover {
+    box-shadow: 1px 1px 16px 1px #F72585;
+    transform: scale(1.1);
+    color: white;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    background-color: #F72585;
+    outline: 2px solid white;
+    height: 100%;
+    transform: skewX(45deg);
+    top: 0;
+    left: -50px;
+    z-index: -1;
+    width: 0;
+    transition: width 1000ms;
+}
+
+button:hover::after {
+    width: 250%;
+}
+
+
+
+/* Hero Container */
+
+.hero-container {
+    background: url("kidsSchool-Images/Header-Kidos.png ") center center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.hero-content h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    animation: outline 0.4s infinite alternate;
+
+}
+
+.hero-content p {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero-content button {
+    margin: 15px auto;
+    display: block;
+}
+
+
+
+
+
+@keyframes outline {
+    0% {
+        text-shadow: 2px 2px 1px rgb(80, 79, 79);
+    }
+
+    100% {
+        text-shadow: 5px 5px 1px grey;
+    }
+}
