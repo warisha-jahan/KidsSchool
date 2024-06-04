@@ -137,15 +137,15 @@ button:hover::after {
 }
 
 .hero-content h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: bold;
     text-align: center;
     animation: outline 0.4s infinite alternate;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero-content p {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -156,15 +156,330 @@ button:hover::after {
 }
 
 
+/* ABOUT US  */
+
+.about-us {
+    padding: 40px 20px;
+    background-color: rgba(128, 128, 128, 0.082);
+
+}
+
+
+.about-us-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 600px;
+
+}
+
+
+.about-us-image {
+    position: relative;
+    width: 400px;
+    height: 600px;
+
+}
+
+.left::after {
+    content: "";
+    background: url("kidsSchool-Images/section1/shape2.png") center center/cover no-repeat;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+
+}
+
+
+.circle1 {
+    background-color: #4CC9F0;
+    width: 50px;
+    height: 40px;
+    border-radius: 90%;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    animation: topTOdown 2s cubic-bezier(0.15, 0.39, 0.78, 0.72) infinite alternate;
+    z-index: 1;
+}
+
+
+.circle2 {
+    width: 30px;
+    height: 40px;
+    background-color: #4CC9F0;
+    position: absolute;
+    bottom: 25%;
+    right: 0;
+    border-radius: 90%;
+    animation: rightTOleft 2s infinite alternate;
+}
+
+.left img {
+
+    position: absolute;
+    animation: down 2s alternate infinite;
+
+
+}
+
+.content {
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    position: relative;
+}
+
+.content h3 {
+    color: #F72585;
+}
+
+.content p {
+    color: grey;
+    padding: 15px 0px;
+}
+
+.content button {
+    margin: 20px 0;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+.about-us-container .content::before {
+    content: "";
+    background: url(kidsSchool-Images/section1/graduation-cap.png) center no-repeat;
+    z-index: -1;
+    width: 200px;
+    height: 100px;
+    top: -45px;
+    left: -80px;
+    position: absolute;
+    transform: rotate(-25deg);
+}
+
+
+.right img {
+    width: 20rem;
+
+}
+
+.right::before {
+    content: "";
+    background: url(kidsSchool-Images/section1/shuttle.png) center no-repeat;
+    z-index: -1;
+    width: 200px;
+    height: 100px;
+    top: 50px;
+    left: -10px;
+    position: absolute;
+
+}
+
+.education {
+    padding: 40px 20px;
+    background-color: rgba(128, 128, 128, 0.082);
+}
+
+.education-programs-container {
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+
+}
+
+.education-programs-container .content {
+    text-align: center;
+}
+
+.education-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    margin: 20px 0px;
+
+
+}
+
+
+.card {
+    padding: 60px;
+    margin: 10px 20px;
+    width: 400px;
+    height: 200px;
+    border-radius: 55px;
+    background-color: white;
+    box-shadow: 1px 2px 9px grey;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 30px 100px;
+    grid-column-gap: 40px;
+    grid-row-gap: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    position: relative;
+    flex-wrap: wrap;
+
+
+
+}
+
+.card h3 {
+
+    font-size: 22px;
+    color: #4361EE;
+
+}
+
+.card p {
+
+    font-size: 16px;
+    color: grey;
+
+}
+
+
+.card img {
+    max-width: 100%;
+    height: 150px;
+    padding: 10px;
+    grid-row: 1/4;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+
+
+
+}
+
+.card a {
+
+    color: black;
+    text-decoration: double;
+
+}
+
+.card:hover {
+    background-color: #F72585;
+    color: white;
+
+}
+
+
+
+.card:hover h3,
+.card:hover p,
+.card:hover a {
+    color: white;
+    /* Text color changes to white when container is hovered */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card1::after {
+    content: "";
+    background: url(kidsSchool-Images/section2/open-book.png) center no-repeat;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    top: 250px;
+    right: 0px;
+    position: absolute;
+    opacity: 0;
+    transform: rotate(-25deg);
+    transition: all ease 0.7s;
+}
+
+.card1:hover::after {
+    opacity: 1;
+    top: 160px;
+    right: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+
+    }
+}
+
+
 
 
 
 @keyframes outline {
     0% {
-        text-shadow: 2px 2px 1px rgb(80, 79, 79);
+        text-shadow: 2px 2px 3px white;
     }
 
     100% {
-        text-shadow: 5px 5px 1px grey;
+        text-shadow: 5px 5px 3px white;
+    }
+}
+
+@keyframes down {
+    0% {
+
+        top: 4%;
+    }
+
+    100% {
+
+        top: 13%;
+    }
+}
+
+@keyframes topTOdown {
+    0% {
+
+        top: 19%;
+    }
+
+    100% {
+
+        top: 25%;
+    }
+}
+
+@keyframes rightTOleft {
+    0% {
+
+        right: 0%;
+    }
+
+    100% {
+
+        right: 20%;
     }
 }
