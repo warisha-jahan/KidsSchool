@@ -159,7 +159,7 @@ button:hover::after {
 /* ABOUT US  */
 
 .about-us {
-    padding: 40px 20px;
+   
     background-color: rgba(128, 128, 128, 0.082);
 
 }
@@ -168,9 +168,9 @@ button:hover::after {
 .about-us-container {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     height: 600px;
+
 
 }
 
@@ -231,6 +231,7 @@ button:hover::after {
     height: 300px;
     padding: 20px;
     position: relative;
+   
 }
 
 .content h3 {
@@ -278,9 +279,16 @@ button:hover::after {
 
 }
 
+
+
+/* Educational Programs  */
+
+
+
 .education {
-    padding: 40px 20px;
+    padding: 20px 20px;
     background-color: rgba(128, 128, 128, 0.082);
+
 }
 
 .education-programs-container {
@@ -323,7 +331,7 @@ button:hover::after {
     cursor: pointer;
     transition: all 0.4s ease-out;
     position: relative;
-    flex-wrap: wrap;
+    
 
 
 
@@ -379,23 +387,7 @@ button:hover::after {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.card1::after {
+.card::after {
     content: "";
     background: url(kidsSchool-Images/section2/open-book.png) center no-repeat;
     z-index: 1;
@@ -409,21 +401,71 @@ button:hover::after {
     transition: all ease 0.7s;
 }
 
-.card1:hover::after {
-    opacity: 1;
-    top: 160px;
-    right: 0px;
+
+
+.card2::after{
+    background: url(kidsSchool-Images/section2/stars.png) center no-repeat;
+}
+
+
+.card3::after{
+    background: url(kidsSchool-Images/section2/sparkles.png) center no-repeat;
+}
+.card4::after{
+    background: url(kidsSchool-Images/section2/shooting-star.png) center no-repeat;
 }
 
 
 
 
+.card:hover::after {
+    opacity: 1;
+    top: 160px;
+    right: 0px;
+}
 
+.Harmonious{
+    padding: 20px 20px;
+    background-color: white;
+     /* overflow: hidden;
+} */
+}
+.harmonious-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    padding: 50px;
+   
+   
+}
 
+.harmonious-container .SchoolGirl{
+    max-width: 80%;
+    padding: 20px;
+    margin: -100px 100px;
 
+}
 
-
-
+.harm-image1{
+    max-width: 25%;
+    padding: 10px;
+    margin: 10px;
+    /* border-top-right-radius: 150px; */
+    border-bottom-right-radius: 80%;
+}
+.harm-image2{
+    max-width: 25%;
+    padding: 10px;
+    margin: 10px;
+    /* border-top-right-radius: 150px; */
+    border-top-left-radius: 80%;
+}
+.harm-image3{
+    max-width: 25%;
+    transform: rotate(-90deg);
+   margin-right: -150px;
+}
 
 
 
