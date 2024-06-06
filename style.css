@@ -159,7 +159,7 @@ button:hover::after {
 /* ABOUT US  */
 
 .about-us {
-   
+
     background-color: rgba(128, 128, 128, 0.082);
 
 }
@@ -231,7 +231,7 @@ button:hover::after {
     height: 300px;
     padding: 20px;
     position: relative;
-   
+
 }
 
 .content h3 {
@@ -286,7 +286,7 @@ button:hover::after {
 
 
 .education {
-    padding: 20px 20px;
+    padding: 20px;
     background-color: rgba(128, 128, 128, 0.082);
 
 }
@@ -296,7 +296,7 @@ button:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
- 
+
 
 }
 
@@ -331,7 +331,7 @@ button:hover::after {
     cursor: pointer;
     transition: all 0.4s ease-out;
     position: relative;
-    
+
 
 
 
@@ -403,15 +403,16 @@ button:hover::after {
 
 
 
-.card2::after{
+.card2::after {
     background: url(kidsSchool-Images/section2/stars.png) center no-repeat;
 }
 
 
-.card3::after{
+.card3::after {
     background: url(kidsSchool-Images/section2/sparkles.png) center no-repeat;
 }
-.card4::after{
+
+.card4::after {
     background: url(kidsSchool-Images/section2/shooting-star.png) center no-repeat;
 }
 
@@ -424,48 +425,183 @@ button:hover::after {
     right: 0px;
 }
 
-.Harmonious{
-    padding: 20px 20px;
+.Harmonious {
+    padding: 20px;
     background-color: white;
-     /* overflow: hidden;
+    /* overflow: hidden;
 } */
 }
-.harmonious-container{
+
+
+/* HARMONIOUS */
+
+
+.harmonious-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 550px;
     padding: 50px;
-   
-   
+
+
 }
 
-.harmonious-container .SchoolGirl{
+.harmonious-container .SchoolGirl {
     max-width: 80%;
     padding: 20px;
     margin: -100px 100px;
 
 }
 
-.harm-image1{
+.harm-image1 {
     max-width: 25%;
     padding: 10px;
     margin: 10px;
     /* border-top-right-radius: 150px; */
     border-bottom-right-radius: 80%;
 }
-.harm-image2{
+
+.harm-image2 {
     max-width: 25%;
     padding: 10px;
     margin: 10px;
     /* border-top-right-radius: 150px; */
     border-top-left-radius: 80%;
 }
-.harm-image3{
+
+.harm-image3 {
     max-width: 25%;
     transform: rotate(-90deg);
-   margin-right: -150px;
+    margin-right: -150px;
 }
+
+
+
+
+/* SCHOOL FACILITIES */
+
+
+.Facilities {
+    padding: 20px;
+    background-color: white;
+}
+
+.Facilities-container {
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.082);
+    padding: 35px;
+
+
+}
+
+.Facilities-container .content {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    height: 200px;
+}
+
+.facility-card-container {
+    display: flex;
+}
+
+.parent-card {
+    position: relative;
+    margin: 0px 20px;
+}
+
+.parent-card::after {
+    content: "";
+    background: url("kidsSchool-Images/section4/stack-of-books.png")no-repeat;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    transition: all 0.4s ease-in;
+}
+
+.parent-card:hover::after {
+    opacity: 0.1;
+    bottom: 30px;
+    left: 100px;
+    z-index: 1;
+}
+
+.parent-card button {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    margin: 10px auto;
+    display: block;
+    z-index: 1;
+    background-color: #f7a102;
+    outline: 2px solid #f7a102;
+    color: rgb(255, 255, 255);
+    box-shadow: -2px -1px 8px  rgb(255, 254, 254);
+}
+
+.parent-card button:hover {
+    box-shadow: 1px 1px 16px 1px #000000;
+    outline: 2px solid #000000;
+    transform: scale(1.1);
+    color: white;
+}
+
+
+.parent-card button::after {
+
+    background-color: black;
+    outline: 2px solid rgb(0, 0, 0);
+
+}
+
+
+
+
+.facility-card {
+    height: 450px;
+    width: 350px;
+    background-color: #F72585;
+    margin: 50px auto;
+    overflow: visible;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    border-radius: 15%;
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.6s ease-in;
+    cursor: pointer;
+    position: relative;
+
+
+}
+.facility-card p{
+    padding: 10px 30px;
+    z-index: 3;
+    position: relative; /* Ensure the paragraph is above the ::after pseudo-element */
+}
+.facility-card:hover {
+    background-color: #f7a102;
+}
+
+.curved-img {
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    width: 200px;
+    height: 200px;
+    background: url("kidsSchool-Images/section4/classroom.jpg")center center/cover;
+    margin: 20px;
+}
+
+
+/* FC1 = facility card 1 */
+
 
 
 
