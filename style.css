@@ -487,7 +487,7 @@ button:hover::after {
 }
 
 .Facilities-container {
-    height: 1200px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -530,6 +530,10 @@ button:hover::after {
     bottom: 30px;
     left: 100px;
     z-index: 1;
+}
+
+.FC-2::after{
+    background: url("kidsSchool-Images/section4/stack-of-books.png")no-repeat;
 }
 
 .parent-card button {
@@ -602,7 +606,84 @@ button:hover::after {
 
 /* FC1 = facility card 1 */
 
+.counter{
+   
+    background-color: white;
+}
 
+
+.counter-container {
+    height: 800px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-start;
+    padding: 35px;
+    background: url(kidsSchool-Images/section5/banner.png) center center/cover;
+
+
+}
+
+.counter-card{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   margin: 10px 80px;
+}
+.animated-image{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    transition: box-shadow 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+    margin: 10px 0px;
+   
+}
+.animated-image:hover{
+    box-shadow: 5px -15px 2px #F72585;
+}
+.animated-image::after{
+    content: "";
+    position: absolute;
+    bottom:-50px;
+    font-size: 28px;
+    font-weight: bold;
+   
+
+}
+.animated-image img{
+    position: relative;
+}
+.animated-image:hover img{
+    animation: moves  1000ms infinite alternate;
+}
+
+.numbers{
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes moves {
+    0%{
+        top: -20px;
+    }
+    100%{
+        top: 0px;
+    }
+}
 
 
 @keyframes fadeIn {
@@ -611,10 +692,6 @@ button:hover::after {
 
     }
 }
-
-
-
-
 
 @keyframes outline {
     0% {
