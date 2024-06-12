@@ -19,8 +19,12 @@
     margin: 0px 20px;
     font-weight: 600;
     color: white;
+    cursor: pointer;
 }
 
+.top-header strong:hover {
+    color: #f7a102;
+}
 
 
 /* Primary Header */
@@ -34,14 +38,14 @@
 }
 
 .logo {
-    max-width: 10%;
+    max-width: 8%;
     padding: 15px;
     cursor: pointer;
     transition: transform 1s ease-out;
 }
 
 .logo:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 nav {
@@ -487,12 +491,12 @@ button:hover::after {
 }
 
 .Facilities-container {
-    height: 1000px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(128, 128, 128, 0.082);
-    padding: 35px;
+    background-color: white;
+    padding-top: 35px;
 
 
 }
@@ -532,7 +536,7 @@ button:hover::after {
     z-index: 1;
 }
 
-.FC-2::after{
+.FC-2::after {
     background: url("kidsSchool-Images/section4/stack-of-books.png")no-repeat;
 }
 
@@ -546,7 +550,7 @@ button:hover::after {
     background-color: #f7a102;
     outline: 2px solid #f7a102;
     color: rgb(255, 255, 255);
-    box-shadow: -2px -1px 8px  rgb(255, 254, 254);
+    box-shadow: -2px -1px 8px rgb(255, 254, 254);
 }
 
 .parent-card button:hover {
@@ -586,11 +590,14 @@ button:hover::after {
 
 
 }
-.facility-card p{
+
+.facility-card p {
     padding: 10px 30px;
     z-index: 3;
-    position: relative; /* Ensure the paragraph is above the ::after pseudo-element */
+    position: relative;
+    /* Ensure the paragraph is above the ::after pseudo-element */
 }
+
 .facility-card:hover {
     background-color: #f7a102;
 }
@@ -606,81 +613,167 @@ button:hover::after {
 
 /* FC1 = facility card 1 */
 
-.counter{
-   
+.counter {
+
     background-color: white;
+    margin: 0;
 }
 
 
 .counter-container {
-    height: 800px;
+    height: 700px;
     display: flex;
-    align-items:flex-end;
+    align-items: flex-end;
     justify-content: flex-start;
-    padding: 35px;
+    /* padding: 35px; */
     background: url(kidsSchool-Images/section5/banner.png) center center/cover;
 
 
 }
 
-.counter-card{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   margin: 10px 80px;
+.counter-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 80px;
+    font-weight: bolder;
+
 }
-.animated-image{
+
+
+.animated-image {
     background-color: white;
     width: 150px;
     height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom-left-radius: 100px;
-    border-top-right-radius: 100px;
+    /* border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px; */
+    border-radius: 100%;
     transition: box-shadow 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
     position: relative;
     margin: 10px 0px;
-   
+
 }
-.animated-image:hover{
+
+.animated-image:hover {
     box-shadow: 5px -15px 2px #F72585;
 }
-.animated-image::after{
+
+.animated-image::after {
     content: "";
     position: absolute;
-    bottom:-50px;
+    bottom: -50px;
     font-size: 28px;
     font-weight: bold;
-   
+
 
 }
-.animated-image img{
+
+.animated-image img {
     position: relative;
 }
-.animated-image:hover img{
-    animation: moves  1000ms infinite alternate;
+
+.animated-image:hover img {
+    animation: moves 1000ms infinite alternate;
 }
 
-.numbers{
+.numbers {
     font-size: 30px;
+    font-family: cursive;
+}
+
+.title {
+    font-family: cursive;
+}
+
+
+/* Internaition Education Container */
+
+.international-education {
+    background-color: rgba(128, 128, 128, 0.082);
+    padding: 35px;
+}
+
+.inter-edu-container {
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5,350px);
+    grid-template-rows: repeat(2,400px);
+
+
 }
 
 
 
 
+   
 
+.gallery-images {
+    padding: 40px;
+    isolation: isolate;
+    padding: 20px;
+    margin: 20px;
+   position: relative;
+    cursor: pointer;
+    isolation: isolate;
 
+   
+}
 
+.gallery-images:hover::after{
+    content: "";
+    position: absolute;
+    background-color: #4362ee4a;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
 
+.image-a {
+    grid-column: 1/3;
+    grid-row: 1/4;
+    transition: all 1s ease-out;
+    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+}
+.image-b{
+    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+}
+.image-c{
+    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+}
+.image-d{
+    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+    
+}
+.image-e {
+    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+    grid-column: 3/5;
+  
+}
+
+.image-f {
+    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+}
 
 
 @keyframes moves {
-    0%{
+    0% {
         top: -20px;
     }
-    100%{
+
+    100% {
         top: 0px;
     }
 }
