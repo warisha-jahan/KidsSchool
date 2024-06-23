@@ -708,8 +708,8 @@ button:hover::after {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5,350px);
-    grid-template-rows: repeat(2,400px);
+    grid-template-columns: repeat(5, 350px);
+    grid-template-rows: repeat(2, 400px);
 
 
 }
@@ -717,55 +717,250 @@ button:hover::after {
 
 
 
-   
+
 
 .gallery-images {
     padding: 40px;
     isolation: isolate;
     padding: 20px;
     margin: 20px;
-   position: relative;
+    position: relative;
     cursor: pointer;
     isolation: isolate;
+    border: 0px solid #f7a102;
+    transition: all 0.2s;
 
-   
+
 }
 
-.gallery-images:hover::after{
+.gallery-images:hover {
+    border-radius: 20px;
+    border: 7px solid #f7a102;
+}
+
+.gallery-images::after {
     content: "";
     position: absolute;
-    background-color: #4362ee4a;
-  top: 10px;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
+    background-color: transparent;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 1
+}
+
+.gallery-images:hover::after {
+    background-color: #f7a10293;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1;
+    border-radius: 20px;
+
+}
+
+
+.gallery-images::before {
+    content: "";
+    position: absolute;
+    background: transparent;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.gallery-images:hover::before {
+    background: url(kidsSchool-Images/section6/eyes.png) no-repeat center center;
+    z-index: 2;
+    /* Higher z-index to be on top of ::after */
+
 }
 
 .image-a {
     grid-column: 1/3;
     grid-row: 1/4;
-    transition: all 1s ease-out;
     background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
 }
-.image-b{
-    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+
+.image-b {
+    background: url(kidsSchool-Images/section6/gallery-image2.jpg)center center/cover;
 }
-.image-c{
-    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+
+.image-c {
+    background: url(kidsSchool-Images/section6/gallery-image3.jpg)center center/cover;
 }
-.image-d{
-    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
-    
+
+.image-d {
+    background: url(kidsSchool-Images/section6/gallery-image4.jpg)center center/cover;
+
 }
+
 .image-e {
-    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+    background: url(kidsSchool-Images/section6/gallery-image5.jpg)center center/cover;
     grid-column: 3/5;
-  
+
 }
 
 .image-f {
-    background: url(kidsSchool-Images/section6/gallery-image1.jpg)center center/cover;
+    background: url(kidsSchool-Images/section6/gallery-image6.jpg)center center/cover;
 }
+
+/* Our Teachers */
+.teachers-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.teachers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teacher-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 50px;
+}
+
+.teacher-card .content {
+    width: 300px;
+    margin: 50px 10px;
+    position: relative;
+    padding: 60px;
+}
+
+.teacher-image {
+    border-radius: 50%;
+    /* backround image set below */
+    height: 250px;
+    width: 250px;
+    position: relative;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+.teacher-image::before {
+    content: "";
+    position: absolute;
+    background-color:transparent;
+    height: 300px;
+    width: 300px;
+    z-index: -1;
+    left: -25px;
+    top: 150px;
+    border-radius: 100%;
+    transition: all 0.8s ;
+}
+.teacher-card:hover .teacher-image::before{
+    top: -25px;
+    background-color: #F72585;
+}
+
+.teacher-card .content::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    height: 240px;
+    width: 240px;
+    z-index: -1;
+    inset: 0;
+    left: 60px;
+    top: -300px;
+    padding: 30px;
+    border-radius: 60px;
+    transition: all 0.6s;
+}
+
+.teacher-card:hover .content::before {
+    top: 0;
+    background-color: #f6ebf048;
+}
+
+
+
+
+
+/* Teacher image listing */
+
+.teacher1{
+    background: url(kidsSchool-Images/section6/teacher1.jpg) center center/cover;
+}
+.teacher2{
+    background: url(kidsSchool-Images/section6/teacher2.jpg) center center/cover;
+}
+
+.teacher3{
+    background: url(kidsSchool-Images/section6/teacher3.jpg) center center/cover;
+}
+
+
+
+
+
+
+
+/* Activity Program */
+
+.activity-program-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.activities{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.activy-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.activity-image img{
+    width: 200px;
+    height: 200px;
+    box-shadow: 10px 10px 20px grey;
+    transition: box-shadow 1s;
+    cursor: pointer;
+}
+.activity-image img:hover{
+    box-shadow: none;
+   
+}
+
+.activity1 img {
+    border-top-right-radius: 50%;
+    border: 10px solid #4361EE;
+ }
+ 
+.activity2 img {
+   border-radius: 100%;
+   border: 10px solid yellow;
+}
+.activity3 img {
+    border-top-left-radius: 50%;
+    border: 10px solid #F72585;
+ }
+ 
+
+
+
 
 
 @keyframes moves {
